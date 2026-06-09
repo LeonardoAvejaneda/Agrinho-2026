@@ -28,7 +28,7 @@ Funcionalidades
 - Scroll reveal com IntersectionObserver para animação suave de elementos
 
 Estrutura do projeto
-
+´´
 /
 ├── index.html         # Página principal
 ├── css/
@@ -36,7 +36,7 @@ Estrutura do projeto
 ├── js/
 │   └── main.js        # Scripts externos
 └── README.md          # Este arquivo
-
+´´
 
 Referências
 
