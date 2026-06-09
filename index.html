@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agro Verde — Mercado de Carbono & Descarbonização</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <!-- HEADER / NAV -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-leaf">🌿</span>
+          <span class="logo-text">Agro<strong>Verde</strong></span>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#o-que-e">O que é</a></li>
+            <li><a href="#agro">Agro & Carbono</a></li>
+            <li><a href="#tipos">Tipos de Mercado</a></li>
+            <li><a href="#brasil">Brasil</a></li>
+            <li><a href="#calculadora">Calculadora</a></li>
+          </ul>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-overlay"></div>
+      <div class="container hero-content">
+        <p class="hero-eyebrow">Agro forte, futuro sustentável</p>
+        <h1 class="hero-title">
+          O Campo que<br />
+          <span class="hero-highlight">Salva o Clima</span>
+        </h1>
+        <p class="hero-sub">
+          Descubra como a agricultura brasileira está na vanguarda do mercado de carbono global,
+          transformando produção sustentável em oportunidade econômica.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#o-que-e" class="btn btn-primary">Explorar</a>
+          <a href="#calculadora" class="btn btn-outline">Calcular créditos</a>
+        </div>
+        <div class="hero-counter-row">
+          <div class="counter-card">
+            <span class="counter-num" id="counterTons">0</span>
+            <span class="counter-label">Mi tCO₂e evitadas pelo agro/ano</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-num" id="counterBR">34</span>
+            <span class="counter-label">Mercados de carbono ativos no mundo</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-num" id="counterPct">17</span>
+            <span class="counter-label">% das emissões globais já reguladas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- O QUE É MERCADO DE CARBONO -->
+    <section class="section section-light" id="o-que-e">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Entenda o conceito</p>
+          <h2>O que é o Mercado de Carbono?</h2>
+        </div>
+        <div class="explainer-grid">
+          <div class="explainer-text">
+            <p>
+              O <strong>mercado de carbono</strong> é um sistema econômico criado para reduzir
+              as emissões de gases de efeito estufa (GEE). Nele, a unidade negociada é
+              a <em>tonelada de CO₂ equivalente (tCO₂e)</em>.
+            </p>
+            <p>
+              Empresas e países que emitem mais CO₂ do que o permitido precisam comprar
+              <strong>créditos de carbono</strong> de quem reduziu ou evitou emissões.
+              Isso cria um incentivo financeiro direto para práticas mais limpas.
+            </p>
+            <p>
+              É como um mercado qualquer — há oferta, demanda e preço —, mas o "produto"
+              negociado é a <strong>preservação do clima</strong>.
+            </p>
+          </div>
+          <div class="explainer-visual">
+            <div class="flow-diagram" id="flowDiagram">
+              <div class="flow-node node-emitter">
+                <span class="node-icon">🏭</span>
+                <span class="node-label">Empresa Emissora</span>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node node-market">
+                <span class="node-icon">⚖️</span>
+                <span class="node-label">Mercado de Carbono</span>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node node-agro">
+                <span class="node-icon">🌱</span>
+                <span class="node-label">Produtor Rural</span>
+              </div>
+            </div>
+            <p class="diagram-caption">
+              O produtor rural que sequestra CO₂ vende créditos para indústrias emissoras.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGRO & CARBONO -->
+    <section class="section section-dark" id="agro">
+      <div class="container">
+        <div class="section-header light">
+          <p class="eyebrow">O protagonista verde</p>
+          <h2>Por que o Agro é Fundamental?</h2>
+        </div>
+        <div class="cards-grid">
+          <article class="card card-dark">
+            <div class="card-icon">🌳</div>
+            <h3>Reflorestamento</h3>
+            <p>
+              Propriedades rurais com Reserva Legal e APP ativas funcionam como
+              <strong>sumidouros naturais de carbono</strong>, absorvendo CO₂ da atmosfera
+              e gerando créditos certificáveis.
+            </p>
+          </article>
+          <article class="card card-dark">
+            <div class="card-icon">🐄</div>
+            <h3>Pecuária de Baixo Carbono</h3>
+            <p>
+              Programas como o <strong>ABC+ (Agricultura de Baixo Carbono)</strong> incentivam
+              a integração lavoura-pecuária-floresta, reduzindo metano e gerando renda extra
+              com créditos.
+            </p>
+          </article>
+          <article class="card card-dark">
+            <div class="card-icon">🌾</div>
+            <h3>Plantio Direto</h3>
+            <p>
+              O Brasil é referência mundial em plantio direto. Essa técnica mantém carbono
+              no solo, reduz erosão e pode gerar <strong>créditos de solo vivo</strong>
+              no mercado voluntário.
+            </p>
+          </article>
+          <article class="card card-dark">
+            <div class="card-icon">⚡</div>
+            <h3>Bioenergia</h3>
+            <p>
+              A cana-de-açúcar e resíduos agrícolas alimentam usinas de biogás e etanol,
+              substituindo combustíveis fósseis e gerando <strong>créditos de energia
+              renovável</strong>.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPOS DE MERCADO -->
+    <section class="section section-light" id="tipos">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Como funciona</p>
+          <h2>Mercado Regulado vs. Voluntário</h2>
+        </div>
+        <div class="comparison-wrapper">
+          <div class="comparison-tabs">
+            <button class="tab-btn active" data-tab="regulado">Mercado Regulado</button>
+            <button class="tab-btn" data-tab="voluntario">Mercado Voluntário</button>
+          </div>
+          <div class="tab-content" id="tabContent">
+            <!-- preenchido pelo JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE BRASIL -->
+    <section class="section section-green" id="brasil">
+      <div class="container">
+        <div class="section-header light">
+          <p class="eyebrow">Cronologia</p>
+          <h2>O Brasil no Mercado de Carbono</h2>
+        </div>
+        <div class="timeline" id="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2015</span>
+              <h3>Acordo de Paris</h3>
+              <p>Brasil assume metas de redução de emissões (NDC), comprometendo-se a desmatar zero na Amazônia até 2030.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2021</span>
+              <h3>Programa ABC+</h3>
+              <p>Lançamento do programa de Agricultura de Baixo Carbono Plus, com R$ 35 bilhões para financiar práticas sustentáveis no campo.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2024</span>
+              <h3>Lei 15.042/2024</h3>
+              <p>O Congresso aprova o Sistema Brasileiro de Comércio de Emissões (SBCE), criando o mercado regulado de carbono no Brasil.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2025–2026</span>
+              <h3>Regulamentação em curso</h3>
+              <p>Os Ministérios da Fazenda e do Desenvolvimento trabalham com a indústria para regulamentar o SBCE e colocá-lo em vigor.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2050</span>
+              <h3>Meta: Neutralidade de Carbono</h3>
+              <p>Brasil se compromete com emissões líquidas zero, com o agronegócio sustentável sendo peça-chave nessa transição.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULADORA -->
+    <section class="section section-light" id="calculadora">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Ferramenta interativa</p>
+          <h2>Calculadora de Créditos de Carbono</h2>
+          <p class="section-desc">
+            Simule quantos créditos de carbono uma propriedade rural pode gerar por ano
+            com base em suas práticas sustentáveis.
+          </p>
+        </div>
+        <div class="calc-wrapper">
+          <div class="calc-form">
+            <div class="form-group">
+              <label for="areaHa">Área de floresta / reserva (hectares)</label>
+              <input type="number" id="areaHa" placeholder="Ex: 100" min="0" />
+            </div>
+            <div class="form-group">
+              <label for="plantio">Área de plantio direto (hectares)</label>
+              <input type="number" id="plantio" placeholder="Ex: 200" min="0" />
+            </div>
+            <div class="form-group">
+              <label for="biogas">Produção de biogás (m³/dia)</label>
+              <input type="number" id="biogas" placeholder="Ex: 50" min="0" />
+            </div>
+            <button class="btn btn-primary btn-full" id="calcBtn">Calcular créditos</button>
+          </div>
+          <div class="calc-result" id="calcResult">
+            <div class="result-placeholder">
+              <span class="result-icon">🌿</span>
+              <p>Preencha os dados ao lado e clique em "Calcular créditos" para ver o resultado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="section section-dark" id="quiz">
+      <div class="container">
+        <div class="section-header light">
+          <p class="eyebrow">Teste seus conhecimentos</p>
+          <h2>Quiz: O que você aprendeu?</h2>
+        </div>
+        <div class="quiz-wrapper" id="quizWrapper">
+          <!-- preenchido pelo JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="logo-leaf">🌿</span>
+          <span class="logo-text">Agro<strong>Verde</strong></span>
+        </div>
+        <p class="footer-desc">
+          Projeto educacional desenvolvido para o Concurso Agrinho 2026 — categoria Programação (Subcategoria 3).<br />
+          Tema: <em>Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</em>.
+        </p>
+        <div class="footer-credits">
+          <p><strong>Fontes e referências:</strong></p>
+          <ul>
+            <li>Senado Federal — Lei 15.042/2024 (SBCE)</li>
+            <li>Iberdrola — Mercados de Carbono (iberdrola.com/sustentabilidade)</li>
+            <li>World Bank — Carbon Pricing Dashboard (carbonpricingdashboard.worldbank.org)</li>
+            <li>Ministério da Agricultura — Programa ABC+</li>
+          </ul>
+        </div>
+        <p class="footer-copy">© 2026 AgroVerde · Concurso Agrinho · SENAR-PR / SEED-PR</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
