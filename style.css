@@ -956,7 +956,9 @@ ul {
 }
 
 
-/*ACESSIBILIDADE*/
+/* =============================================
+   ACESSIBILIDADE
+   ============================================= */
 
 /* --- PAINEL DE ACESSIBILIDADE NO CABECALHO --- */
 .painel-acessibilidade {
@@ -1325,4 +1327,34 @@ body.alto-contraste .lendo {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* --- LOGO SVG COM CO2 --- */
+.logo-icone {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-logo-arvore {
+  width: 36px;
+  height: 36px;
+  color: var(--verde-400, #3aad66);
+}
+
+.logo-co2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  font-size: 7px;
+  font-weight: 900;
+  color: var(--dourado-400);
+  letter-spacing: -0.5px;
+  line-height: 1;
+  pointer-events: none;
+  font-family: var(--fonte-texto);
 }
