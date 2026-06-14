@@ -427,7 +427,7 @@ botaoLeitura.addEventListener("click", function () {
     // Para a leitura
     window.speechSynthesis.cancel();
     lendoAgora = false;
-    botaoLeitura.textContent = "🔊";
+    botaoLeitura.innerHTML = '<svg class="svg-icone-acesso" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 18V14M6 14H8L13 17V7L8 10H5C3.89543 10 3 10.8954 3 12V12C3 13.1046 3.89543 14 5 14H6ZM17 7L19 5M17 17L19 19M19 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     botaoLeitura.classList.remove("ativo");
     botaoLeitura.setAttribute("aria-label", "Leitura em voz alta");
 
@@ -457,7 +457,7 @@ botaoLeitura.addEventListener("click", function () {
     if (indice >= textos.length || !lendoAgora) {
       // Terminou tudo
       lendoAgora = false;
-      botaoLeitura.textContent = "🔊";
+      botaoLeitura.innerHTML = '<svg class="svg-icone-acesso" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 18V14M6 14H8L13 17V7L8 10H5C3.89543 10 3 10.8954 3 12V12C3 13.1046 3.89543 14 5 14H6ZM17 7L19 5M17 17L19 19M19 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
       botaoLeitura.classList.remove("ativo");
       botaoLeitura.setAttribute("aria-label", "Leitura em voz alta");
       return;
