@@ -451,7 +451,7 @@ ul {
   font-size: 2.2rem;
 }
 
-/* --- ABAS DE COMPARACAO --- */
+/* --- ABAS PRA COMPARACAO --- */
 .bloco-comparacao {
   max-width: 820px;
 }
@@ -952,5 +952,184 @@ ul {
 
   .bloco-calculadora {
     padding: 32px 24px;
+  }
+}
+
+/* ACESSIBILIDADE*/
+
+/* --- PAINEL DE ACESSIBILIDADE NO CABECALHO --- */
+.painel-acessibilidade {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 16px;
+}
+
+.botao-acesso {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--verde-300);
+  width: 34px;
+  height: 34px;
+  border-radius: var(--borda-arredondada-p);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: var(--fonte-texto);
+  transition: all var(--transicao);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-acesso:hover {
+  background: rgba(255,255,255,0.18);
+  color: var(--branco);
+  border-color: var(--verde-500);
+}
+
+.botao-acesso.ativo {
+  background: var(--verde-600);
+  color: var(--branco);
+  border-color: var(--verde-500);
+}
+
+/* --- MODO ESCURO --- */
+body.modo-escuro {
+  --creme:     #121212;
+  --branco:    #1e1e1e;
+  --cinza-700: #e0e0e0;
+  --cinza-500: #aaaaaa;
+  --cinza-200: #333333;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.modo-escuro .secao-clara {
+  background-color: #1a1a1a;
+}
+
+body.modo-escuro .visual-explicacao {
+  background-color: #242424;
+  border-color: #333;
+}
+
+body.modo-escuro .conteudo-aba {
+  background-color: #242424;
+  border-color: #333;
+}
+
+body.modo-escuro .abas-comparacao {
+  border-color: #333;
+}
+
+body.modo-escuro .botao-aba {
+  background-color: #242424;
+  color: #aaa;
+}
+
+body.modo-escuro .bloco-calculadora {
+  background-color: #242424;
+  border-color: #333;
+}
+
+body.modo-escuro .grupo-campo input {
+  background-color: #1a1a1a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+body.modo-escuro .resultado-calculadora {
+  background-color: #1a2e22;
+  border-color: var(--verde-700);
+}
+
+body.modo-escuro .rodape {
+  background-color: #0a0a0a;
+}
+
+/* --- ALTO CONTRASTE --- */
+body.alto-contraste {
+  --verde-500: #00ff88;
+  --verde-300: #00ffaa;
+  --verde-900: #000000;
+  --verde-800: #000000;
+  --verde-700: #005500;
+  --dourado-400: #ffff00;
+  --cinza-700: #ffffff;
+  --cinza-500: #eeeeee;
+  --creme: #000000;
+  --branco: #111111;
+  background-color: #000;
+  color: #fff;
+}
+
+body.alto-contraste .secao-clara {
+  background-color: #000;
+}
+
+body.alto-contraste .cabecalho {
+  background-color: #000;
+  border-bottom: 2px solid #00ff88;
+}
+
+body.alto-contraste .botao-principal {
+  background-color: #00ff88;
+  color: #000;
+  border-color: #00ff88;
+}
+
+body.alto-contraste .botao-contorno {
+  color: #ffff00;
+  border-color: #ffff00;
+}
+
+body.alto-contraste .visual-explicacao,
+body.alto-contraste .conteudo-aba,
+body.alto-contraste .bloco-calculadora {
+  background-color: #111;
+  border-color: #00ff88;
+}
+
+body.alto-contraste .grupo-campo input {
+  background-color: #000;
+  border-color: #00ff88;
+  color: #fff;
+}
+
+body.alto-contraste .botao-aba.ativo {
+  background-color: #005500;
+  color: #00ff88;
+}
+
+body.alto-contraste a:focus,
+body.alto-contraste button:focus,
+body.alto-contraste input:focus {
+  outline: 3px solid #ffff00;
+  outline-offset: 2px;
+}
+
+/* --- BARRA DE LEITURA (destaque da frase sendo lida) --- */
+.lendo {
+  background-color: rgba(224, 170, 42, 0.25);
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+body.alto-contraste .lendo {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+/* --- RESPONSIVO ACESSIBILIDADE --- */
+@media (max-width: 700px) {
+  .painel-acessibilidade {
+    gap: 4px;
+    margin-right: 8px;
+  }
+
+  .botao-acesso {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
   }
 }

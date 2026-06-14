@@ -349,3 +349,150 @@ var observadorScroll = new IntersectionObserver(
 elementosAnimados.forEach(function (el) {
   observadorScroll.observe(el);
 });
+
+// ACESSIBILIDADE
+
+// --- MODO ESCURO ---
+var botaoModoEscuro = document.getElementById("botaoModoEscuro");
+
+botaoModoEscuro.addEventListener("click", function () {
+  document.body.classList.toggle("modo-escuro");
+  botaoModoEscuro.classList.toggle("ativo");
+
+  // Desativa alto contraste se estiver ativo (nao combinam)
+  if (document.body.classList.contains("alto-contraste")) {
+    document.body.classList.remove("alto-contraste");
+    botaoAltoContraste.classList.remove("ativo");
+  }
+});
+
+// --- ALTO CONTRASTE ---
+var botaoAltoContraste = document.getElementById("botaoAltoContraste");
+
+botaoAltoContraste.addEventListener("click", function () {
+  document.body.classList.toggle("alto-contraste");
+  botaoAltoContraste.classList.toggle("ativo");
+
+  // Desativa modo escuro se estiver ativo
+  if (document.body.classList.contains("modo-escuro")) {
+    document.body.classList.remove("modo-escuro");
+    botaoModoEscuro.classList.remove("ativo");
+  }
+});
+
+// --- TAMANHO DA FONTE ---
+var tamanhoFonteAtual = 16;
+var tamanhoMinimo = 12;
+var tamanhoMaximo = 22;
+
+var botaoAumentarFonte = document.getElementById("botaoAumentarFonte");
+var botaoDiminuirFonte = document.getElementById("botaoDiminuirFonte");
+
+botaoAumentarFonte.addEventListener("click", function () {
+  if (tamanhoFonteAtual < tamanhoMaximo) {
+    tamanhoFonteAtual += 2;
+    document.body.style.fontSize = tamanhoFonteAtual + "px";
+  }
+});
+
+botaoDiminuirFonte.addEventListener("click", function () {
+  if (tamanhoFonteAtual > tamanhoMinimo) {
+    tamanhoFonteAtual -= 2;
+    document.body.style.fontSize = tamanhoFonteAtual + "px";
+  }
+});
+
+// --- LEITURA EM VOZ ALTA (Web Speech API) ---
+var botaoLeitura = document.getElementById("botaoLeitura");
+var lendoAgora = false;
+var elementoAtual = null;
+
+// Pega todos os paragrafos e titulos legiveis da pagina
+function pegarTextosLegíveis() {
+  var seletores = "h1, h2, h3, p, .legenda-contador, .ano-timeline";
+  return Array.from(document.querySelectorAll(seletores)).filter(function (el) {
+    // Ignora elementos dentro do cabecalho e rodape
+    return !el.closest(".cabecalho") && !el.closest(".rodape") && el.textContent.trim().length > 0;
+  });
+}
+
+botaoLeitura.addEventListener("click", function () {
+  // Verifica se o navegador suporta a API
+  if (!window.speechSynthesis) {
+    alert("Seu navegador não suporta leitura em voz alta. Tente o Google Chrome.");
+    return;
+  }
+
+  if (lendoAgora) {
+    // Para a leitura
+    window.speechSynthesis.cancel();
+    lendoAgora = false;
+    botaoLeitura.textContent = "🔊";
+    botaoLeitura.classList.remove("ativo");
+    botaoLeitura.setAttribute("aria-label", "Leitura em voz alta");
+
+    // Remove destaque do elemento atual
+    if (elementoAtual) {
+      elementoAtual.classList.remove("lendo");
+      elementoAtual = null;
+    }
+    return;
+  }
+
+  // Inicia a leitura
+  lendoAgora = true;
+  botaoLeitura.textContent = "⏹";
+  botaoLeitura.classList.add("ativo");
+  botaoLeitura.setAttribute("aria-label", "Parar leitura");
+
+  var textos = pegarTextosLegíveis();
+  var indice = 0;
+
+  function lerProximo() {
+    // Remove destaque do anterior
+    if (elementoAtual) {
+      elementoAtual.classList.remove("lendo");
+    }
+
+    if (indice >= textos.length || !lendoAgora) {
+      // Terminou tudo
+      lendoAgora = false;
+      botaoLeitura.textContent = "🔊";
+      botaoLeitura.classList.remove("ativo");
+      botaoLeitura.setAttribute("aria-label", "Leitura em voz alta");
+      return;
+    }
+
+    // Destaca o elemento sendo lido e rola até ele
+    elementoAtual = textos[indice];
+    elementoAtual.classList.add("lendo");
+    elementoAtual.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    // Cria o utterance (fala)
+    var fala = new SpeechSynthesisUtterance(elementoAtual.textContent);
+    fala.lang = "pt-BR";
+    fala.rate = 0.95;  // velocidade ligeiramente mais lenta para melhor compreensão
+    fala.pitch = 1;
+
+    fala.onend = function () {
+      indice++;
+      lerProximo();
+    };
+
+    fala.onerror = function () {
+      indice++;
+      lerProximo();
+    };
+
+    window.speechSynthesis.speak(fala);
+  }
+
+  lerProximo();
+});
+
+// Para a leitura se o usuario sair da pagina
+window.addEventListener("beforeunload", function () {
+  if (window.speechSynthesis) {
+    window.speechSynthesis.cancel();
+  }
+});
