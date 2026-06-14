@@ -1284,3 +1284,45 @@ body.alto-contraste .lendo {
     font-size: 0.75rem;
   }
 }
+
+/* --- IMAGEM DO LOGO --- */
+.imagem-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/* --- ICONES SVG --- */
+.svg-icone {
+  width: 52px;
+  height: 52px;
+  display: block;
+  color: var(--verde-300);
+}
+
+.icone-node .svg-icone {
+  width: 36px;
+  height: 36px;
+  color: inherit;
+}
+
+.svg-icone-acesso {
+  width: 18px;
+  height: 18px;
+  display: block;
+  color: currentColor;
+}
+
+/* Garante que o icone-cartao nao quebre o layout */
+.icone-cartao {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 4px;
+}
+
+.icone-node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
