@@ -391,14 +391,14 @@ var botaoDiminuirFonte = document.getElementById("botaoDiminuirFonte");
 botaoAumentarFonte.addEventListener("click", function () {
   if (tamanhoFonteAtual < tamanhoMaximo) {
     tamanhoFonteAtual += 2;
-    document.body.style.fontSize = tamanhoFonteAtual + "px";
+    document.documentElement.style.fontSize = tamanhoFonteAtual + "px";
   }
 });
 
 botaoDiminuirFonte.addEventListener("click", function () {
   if (tamanhoFonteAtual > tamanhoMinimo) {
     tamanhoFonteAtual -= 2;
-    document.body.style.fontSize = tamanhoFonteAtual + "px";
+    document.documentElement.style.fontSize = tamanhoFonteAtual + "px";
   }
 });
 
