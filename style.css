@@ -451,7 +451,7 @@ ul {
   font-size: 2.2rem;
 }
 
-/* --- ABAS PRA COMPARACAO --- */
+/* --- ABAS DE COMPARACAO --- */
 .bloco-comparacao {
   max-width: 820px;
 }
@@ -955,7 +955,8 @@ ul {
   }
 }
 
-/* ACESSIBILIDADE*/
+
+/*ACESSIBILIDADE*/
 
 /* --- PAINEL DE ACESSIBILIDADE NO CABECALHO --- */
 .painel-acessibilidade {
@@ -996,11 +997,6 @@ ul {
 
 /* --- MODO ESCURO --- */
 body.modo-escuro {
-  --creme:     #121212;
-  --branco:    #1e1e1e;
-  --cinza-700: #e0e0e0;
-  --cinza-500: #aaaaaa;
-  --cinza-200: #333333;
   background-color: #121212;
   color: #e0e0e0;
 }
@@ -1009,9 +1005,46 @@ body.modo-escuro .secao-clara {
   background-color: #1a1a1a;
 }
 
+body.modo-escuro .cabecalho-secao h2 {
+  color: #e0e0e0;
+}
+
+body.modo-escuro .texto-logo {
+  color: #e0e0e0;
+}
+
+body.modo-escuro .titulo-hero {
+  color: #ffffff;
+}
+
+body.modo-escuro .painel-aba h3 {
+  color: #e0e0e0;
+}
+
+body.modo-escuro .painel-aba p {
+  color: #aaaaaa;
+}
+
+body.modo-escuro .item-lista-aba {
+  color: #aaaaaa;
+}
+
 body.modo-escuro .visual-explicacao {
   background-color: #242424;
   border-color: #333;
+}
+
+body.modo-escuro .texto-explicacao p {
+  color: #cccccc;
+}
+
+body.modo-escuro .legenda-diagrama {
+  color: #aaaaaa;
+  border-top-color: #333;
+}
+
+body.modo-escuro .legenda-node {
+  color: #333333;
 }
 
 body.modo-escuro .conteudo-aba {
@@ -1033,6 +1066,10 @@ body.modo-escuro .bloco-calculadora {
   border-color: #333;
 }
 
+body.modo-escuro .grupo-campo label {
+  color: #e0e0e0;
+}
+
 body.modo-escuro .grupo-campo input {
   background-color: #1a1a1a;
   border-color: #444;
@@ -1044,38 +1081,98 @@ body.modo-escuro .resultado-calculadora {
   border-color: var(--verde-700);
 }
 
+body.modo-escuro .conteudo-timeline h3 {
+  color: #e0e0e0;
+}
+
 body.modo-escuro .rodape {
   background-color: #0a0a0a;
 }
 
+body.modo-escuro .marca-rodape {
+  color: #e0e0e0;
+}
+
+body.modo-escuro .descricao-secao {
+  color: #aaaaaa;
+}
+
 /* --- ALTO CONTRASTE --- */
 body.alto-contraste {
-  --verde-500: #00ff88;
-  --verde-300: #00ffaa;
-  --verde-900: #000000;
-  --verde-800: #000000;
-  --verde-700: #005500;
-  --dourado-400: #ffff00;
-  --cinza-700: #ffffff;
-  --cinza-500: #eeeeee;
-  --creme: #000000;
-  --branco: #111111;
-  background-color: #000;
-  color: #fff;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 body.alto-contraste .secao-clara {
-  background-color: #000;
+  background-color: #000000;
+}
+
+body.alto-contraste .secao-escura {
+  background-color: #000000;
+}
+
+body.alto-contraste .secao-verde {
+  background-color: #000000;
 }
 
 body.alto-contraste .cabecalho {
-  background-color: #000;
+  background-color: #000000;
   border-bottom: 2px solid #00ff88;
+}
+
+body.alto-contraste .cabecalho-secao h2 {
+  color: #ffffff;
+}
+
+body.alto-contraste .texto-logo {
+  color: #ffffff;
+}
+
+body.alto-contraste .titulo-hero {
+  color: #ffffff;
+}
+
+body.alto-contraste .titulo-destaque-hero {
+  color: #ffff00;
+}
+
+body.alto-contraste .antititulo {
+  color: #00ff88;
+}
+
+body.alto-contraste .antititulo-hero {
+  color: #ffff00;
+}
+
+body.alto-contraste .sub-hero {
+  color: #cccccc;
+}
+
+body.alto-contraste .texto-explicacao p {
+  color: #ffffff;
+}
+
+body.alto-contraste .legenda-diagrama {
+  color: #cccccc;
+  border-top-color: #444;
+}
+
+body.alto-contraste .cartao-escuro {
+  background-color: #111111;
+  border-color: #00ff88;
+}
+
+body.alto-contraste .cartao-escuro h3 {
+  color: #00ff88;
+}
+
+body.alto-contraste .cartao-escuro p {
+  color: #cccccc;
 }
 
 body.alto-contraste .botao-principal {
   background-color: #00ff88;
-  color: #000;
+  color: #000000;
   border-color: #00ff88;
 }
 
@@ -1087,19 +1184,73 @@ body.alto-contraste .botao-contorno {
 body.alto-contraste .visual-explicacao,
 body.alto-contraste .conteudo-aba,
 body.alto-contraste .bloco-calculadora {
-  background-color: #111;
+  background-color: #111111;
   border-color: #00ff88;
+}
+
+body.alto-contraste .painel-aba h3 {
+  color: #00ff88;
+}
+
+body.alto-contraste .painel-aba p,
+body.alto-contraste .item-lista-aba {
+  color: #ffffff;
+}
+
+body.alto-contraste .grupo-campo label {
+  color: #ffffff;
 }
 
 body.alto-contraste .grupo-campo input {
-  background-color: #000;
+  background-color: #000000;
   border-color: #00ff88;
-  color: #fff;
+  color: #ffffff;
+}
+
+body.alto-contraste .botao-aba {
+  background-color: #111111;
+  color: #cccccc;
+  border-color: #333;
 }
 
 body.alto-contraste .botao-aba.ativo {
-  background-color: #005500;
+  background-color: #003300;
   color: #00ff88;
+}
+
+body.alto-contraste .conteudo-timeline {
+  border-color: #00ff88;
+  background-color: #111111;
+}
+
+body.alto-contraste .conteudo-timeline h3 {
+  color: #00ff88;
+}
+
+body.alto-contraste .conteudo-timeline p {
+  color: #cccccc;
+}
+
+body.alto-contraste .linha-tempo::before {
+  background: #00ff88;
+}
+
+body.alto-contraste .rodape {
+  background-color: #000000;
+  border-top-color: #00ff88;
+}
+
+body.alto-contraste .marca-rodape {
+  color: #ffffff;
+}
+
+body.alto-contraste .descricao-rodape,
+body.alto-contraste .creditos-rodape {
+  color: #cccccc;
+}
+
+body.alto-contraste .creditos-rodape p {
+  color: #ffff00;
 }
 
 body.alto-contraste a:focus,
