@@ -1,5 +1,7 @@
-/*
-   Concurso Agrinho 2026 — Subcategoria 3*/
+/* =============================================
+   AGROVERDE — Mercado de Carbono & Descarbonização
+   Concurso Agrinho 2026 — Subcategoria 3
+   ============================================= */
 
 /* --- VARIAVEIS DE COR E ESTILO --- */
 :root {
@@ -956,7 +958,9 @@ ul {
 }
 
 
-/*ACESSIBILIDADE*/
+/* =============================================
+   ACESSIBILIDADE
+   ============================================= */
 
 /* --- PAINEL DE ACESSIBILIDADE NO CABECALHO --- */
 .painel-acessibilidade {
@@ -1452,4 +1456,58 @@ figcaption {
   .img-brasil {
     height: 200px;
   }
+}
+
+/* --- ICONES NO MODO ESCURO E ALTO CONTRASTE --- */
+
+/* Modo escuro - icones do diagrama */
+body.modo-escuro .emissor-node .svg-icone {
+  color: #c0703a;
+}
+
+body.modo-escuro .mercado-node .svg-icone {
+  color: #c9941a;
+}
+
+body.modo-escuro .agro-node .svg-icone {
+  color: #3aad66;
+}
+
+/* Modo escuro - icones dos cards */
+body.modo-escuro .svg-icone {
+  color: var(--verde-300);
+}
+
+/* Alto contraste - icones do diagrama */
+body.alto-contraste .emissor-node .svg-icone {
+  color: #ff8800;
+}
+
+body.alto-contraste .mercado-node .svg-icone {
+  color: #ffff00;
+}
+
+body.alto-contraste .agro-node .svg-icone {
+  color: #00ff88;
+}
+
+/* Alto contraste - icones dos cards */
+body.alto-contraste .svg-icone {
+  color: #00ff88;
+}
+
+/* Alto contraste - fundos dos nodes do diagrama */
+body.alto-contraste .emissor-node {
+  background-color: #1a0a00;
+  border-color: #ff8800;
+}
+
+body.alto-contraste .mercado-node {
+  background-color: #1a1a00;
+  border-color: #ffff00;
+}
+
+body.alto-contraste .agro-node {
+  background-color: #001a0a;
+  border-color: #00ff88;
 }
