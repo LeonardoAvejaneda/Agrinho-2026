@@ -1,4 +1,4 @@
-/*AGROVERDE — Mercado de Carbono & Descarbonização
+/*
    Concurso Agrinho 2026 — Subcategoria 3*/
 
 /* --- VARIAVEIS DE COR E ESTILO --- */
@@ -956,9 +956,7 @@ ul {
 }
 
 
-/* =============================================
-   ACESSIBILIDADE
-   ============================================= */
+/*ACESSIBILIDADE*/
 
 /* --- PAINEL DE ACESSIBILIDADE NO CABECALHO --- */
 .painel-acessibilidade {
@@ -1357,4 +1355,101 @@ body.alto-contraste .lendo {
   line-height: 1;
   pointer-events: none;
   font-family: var(--fonte-texto);
+}
+
+/* --- IMAGENS DAS SECOES --- */
+.imagem-secao {
+  margin-bottom: 20px;
+}
+
+.img-secao {
+  width: 100%;
+  border-radius: var(--borda-arredondada-m);
+  object-fit: cover;
+  max-height: 220px;
+}
+
+figcaption {
+  font-size: 0.72rem;
+  color: var(--cinza-500);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Galeria de imagens - Agro & Carbono */
+.galeria-agro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.figura-galeria {
+  border-radius: var(--borda-arredondada-m);
+  overflow: hidden;
+}
+
+.img-galeria {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transicao);
+}
+
+.img-galeria:hover {
+  transform: scale(1.03);
+}
+
+.figura-galeria figcaption {
+  background-color: rgba(0,0,0,0.3);
+  color: var(--verde-300);
+  padding: 6px 10px;
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+/* Bloco Brasil com imagem lateral */
+.bloco-brasil {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.figura-brasil {
+  position: sticky;
+  top: 80px;
+}
+
+.img-brasil {
+  width: 100%;
+  border-radius: var(--borda-arredondada-m);
+  object-fit: cover;
+  height: 320px;
+  border: 2px solid var(--verde-700);
+}
+
+.figura-brasil figcaption {
+  color: var(--verde-300);
+  text-align: center;
+  margin-top: 8px;
+}
+
+@media (max-width: 960px) {
+  .galeria-agro {
+    grid-template-columns: 1fr;
+  }
+
+  .bloco-brasil {
+    grid-template-columns: 1fr;
+  }
+
+  .figura-brasil {
+    position: static;
+  }
+
+  .img-brasil {
+    height: 200px;
+  }
 }
