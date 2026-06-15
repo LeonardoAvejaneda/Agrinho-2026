@@ -55,7 +55,6 @@ AGRINHO 2026/
 ├── style.css
 ├── main.js
 ├── logo.png
-├── hero.png        ← fundo do hero
 ├── emissoes.png    ← seção "O que é"
 ├── gado.png        ← galeria Agro & Carbono
 ├── plantacao.png   ← galeria Agro & Carbono
