@@ -50,11 +50,18 @@ O site conta com um painel de acessibilidade no cabeçalho com os seguintes recu
 ## Estrutura do projeto
 
 ```
-/
-├── index.html    — Página principal
-├── style.css     — Estilos externos
-├── main.js       — Scripts externos
-└── README.md     — Este arquivo
+AGRINHO 2026/
+├── index.html
+├── style.css
+├── main.js
+├── logo.png
+├── hero.png        ← fundo do hero
+├── emissoes.png    ← seção "O que é"
+├── gado.png        ← galeria Agro & Carbono
+├── plantacao.png   ← galeria Agro & Carbono
+├── produtor.png    ← galeria Agro & Carbono
+├── cerrado.png     ← lateral da timeline Brasil
+└── README.md
 ```
 
 ---
